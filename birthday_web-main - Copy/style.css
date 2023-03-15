@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Bodoni Moda', serif;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bday.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: relative; */
+}
+.container{
+    perspective: 1000px;
+}
+.main{
+    width: 280px;
+    height: 360px;
+}
+
+.card{
+    width: 280px;
+    height: 360px;
+    position: absolute;
+    top: 100px;
+    left: 230px;
+    transition: 2s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+/* .card:hover{
+    transform: rotateY(180deg);
+} */
+.block{
+    position: absolute;
+    top:200px;
+    right: 600px;
+    perspective: 800px;
+}
+.outside,.inside{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5rem;
+}
+.outside{
+    background-color: blanchedalmond;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+    position: absolute;
+    transition: .4s;
+    /* backface-visibility: hidden; */
+}
+.outside:hover{
+    background-color: rgb(255, 244, 79);    
+}
+.outside h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: salmon;
+    margin-bottom: 30px;
+}
+.inside{
+    position: absolute;
+    width: 280px;
+    height: 360px;
+    top: 150px;
+    left: 630px;
+    background-color: rgb(255, 244, 79);
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+    /* transform: rotateY(180deg); */
+    transition: .4s;
+}
+.inside h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.frames{
+    width: 400px;
+    height: 150px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0.8rem;
+
+    transform: rotateY(-230deg) rotateX(20deg);
+    position: absolute;
+}
+.frames img{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.frames p{
+   font-size: 20px;
+   font-weight: bold;
+   transform: rotateY(180deg);
+}
+.frames:nth-child(1)
+{
+    top:-110px;
+    z-index: -1;
+    background-color: coral;
+}
+.frames:nth-child(2){
+    background-color: goldenrod;
+}
+.frames:nth-child(3)
+{
+    top:100px;
+    background-color: burlywood;
+}
+
+
+
+
+  .nav,
+  .slider {
+    font-family: "ROBOTO", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* position: relative; */
+    position: absolute;
+    background-color: transparent;
+    text-align: center;
+    padding: 0 2em;
+    bottom: 50px;
+    left: 36%;
+  }
+  h3.span {
+    font-size: 2rem;
+    letter-spacing: 0.7em;
+    font-family: "ROBOTO", sans-serif;
+    font-weight: 300;
+    color: #faebd7;
+    z-index: 4;
+  }
+  span:hover {
+    color: #ff0266;
+    font-weight: 500;
+    font-size: 2.2vw;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: #1e1f26;
+    z-index: 10;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  .nav-container--top-first {
+    position: fixed;
+    top: 75px;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  .nav-container--top-second {
+    position: fixed;
+    top: 0;
+  }
+  .nav-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #03dac6;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 2vw;
+  }
+  
+  .nav-tab:hover {
+    color: #1e1f26;
+    background: #03dac6;
+    transition: all 0.5s ease;
+  }
+  
+  .nav-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #03dac6;
+    transition: left 0.3s ease;
+  }
+  .background {
+    position: absolute;
+    height: 90vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: auto;
+  }
+  .background {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+  .loader span {
+    color: #faebd7;
+    text-shadow: 0 0 0 #faebd7;
+    font-size: 3rem;
+    -webkit-animation: loading 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes loading {
+    to {
+      text-shadow: 20px 0 70px #ff0266;
+      color: #ff0266;
+    }
+  }
+  .loader span:nth-child(2) {
+    -webkit-animation-delay: 0.1s;
+  }
+  .loader span:nth-child(3) {
+    -webkit-animation-delay: 0.2s;
+  }
+  .loader span:nth-child(4) {
+    -webkit-animation-delay: 0.3s;
+  }
+  .loader span:nth-child(5) {
+    -webkit-animation-delay: 0.4s;
+  }
+  .loader span:nth-child(6) {
+    -webkit-animation-delay: 0.5s;
+  }
+  .loader span:nth-child(7) {
+    -webkit-animation-delay: 0.6s;
+  }
+  .loader span:nth-child(8) {
+    -webkit-animation-delay: 0.7s;
+  }
+  .loader span:nth-child(9) {
+    -webkit-animation-delay: 0.8s;
+  }
+  
+  .loader span:nth-child(10) {
+    -webkit-animation-delay: 0.9s;
+  }
+  .loader span:nth-child(11) {
+    -webkit-animation-delay: 1s;
+  }
+  .loader span:nth-child(12) {
+    -webkit-animation-delay: 1.1s;
+  }
+  .loader span:nth-child(13) {
+    -webkit-animation-delay: 1.2s;
+  }
+  .loader span:nth-child(14) {
+    -webkit-animation-delay: 1.3s;
+  }
+  .loader span:nth-child(15) {
+    -webkit-animation-delay: 1.4s;
+  }
+  .loader span:nth-child(16) {
+    -webkit-animation-delay: 1.5s;
+  }
+  .loader span:nth-child(17) {
+    -webkit-animation-delay: 1.6s;
+  }
+  .loader span:nth-child(18) {
+    -webkit-animation-delay: 1.7s;
+  }
+  .loader span:nth-child(19) {
+    -webkit-animation-delay: 1.8s;
+  }
+  .loader span:nth-child(20) {
+    -webkit-animation-delay: 1.9s;
+  }
+  .loader span:nth-child(21) {
+    -webkit-animation-delay: 2s;
+  }
+  .loader span:nth-child(22) {
+    -webkit-animation-delay: 2.1s;
+  }
